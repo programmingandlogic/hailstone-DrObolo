@@ -1,0 +1,29 @@
+/*
+ * File: Hailstone.java
+ * --------------------
+ * This program is a stub for the Hailstone problem, which computes
+ * Hailstone sequence described in Assignment #2.
+ */
+
+import acm.program.*;
+
+public class Hailstone extends ConsoleProgram {
+
+	public void run() {
+
+		println("Hey kids, you like Godel, Escher, Bach? We'll help y'all get to one.");
+		//Asks for a number, checks if it's even or odd, then does the respective formula for each.
+		int n = readInt("Enter a number, a positive number! >:( - ");
+		while (n != 1) {	
+			if (n % 2 == 0) {
+				println(n + " is even, so we'll divide it by 2");
+				n = n/2;		
+		}
+				else {
+					println(n + " is odd, so we'll multiply by 3 then add 1");
+					n = 3*n+1;
+			}
+		}
+		println(n + " is one!!! :-)");
+	}
+}
